@@ -1,0 +1,300 @@
+Weather and Market Research 
+Kyra Mozley, 1B Group Project, Team Papa
+
+Weather
+Probably useful to include in a weather message: (considering this is farmers) 
+	Min&Max temp of the day
+	Weather (sunny, showers, snow etc.) 
+	Also need long forecast to decide when to put down a certain crop or fertiliser 
+	Precipitation rate
+	Warning of hail, frost, storms should be distributed as there are agricultural plants that are to be protected 
+	
+	Cloud cover 
+	Humidity 	
+	Wind direction
+	Pressure 
+	
+	Perhaps sunrise / sunset but sunrise in Africa probably rather early so might want to include tomorrows sunrise instead so you know when to wake or something idk?
+	Perhaps humidity, dunno much about farming ngl
+	
+	
+	
+
+- Openweathermap 
+	Can either enter city name or geo coords 
+	Seems to work for obscure towns I entered 
+	Free package includes Current weather API, updates < 3 hours, weather alerts (- which is useful to add, like how health we send flu outbreak, also warn of tsunami etc.) , 60 API Calls per min
+	Uses JSON
+	
+	API Documentation: https://openweathermap.org/current
+	
+	Example result: 
+	{
+	 "coord":{"lon":-0.13,"lat":51.51},
+	 "weather":[{"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d"}],
+	 "base":"stations",
+	 "main":{"temp":280.32,"pressure":1012,"humidity":81,"temp_min":279.15,"temp_max":281.15},
+	 "visibility":10000,
+	 "wind":{"speed":4.1,"deg":80},
+	 "clouds":{"all":90},
+	 "dt":1485789600,
+	 "sys":{"type":1,"id":5091,"message":0.0103,"country":"GB","sunrise":1485762037,"sunset":1485794875},
+	 "id":2643743,
+	 "name":"London",
+	 "cod":200
+	}
+
+	Can get simple temp_min, temp_max in the city which is probably the most useful? Also can split by morning, evening, and night 
+
+	May be useful, they also provide output language support for many different languages: 
+		Arabic, Bulgarian, Catalan, Czech, German, Greek, English, Persian (Farsi), Finnish, French, Galician, Croatian, Hungarian, Italian, 
+		Japanese, Korean, Latvian, Lithuanian, Macedonian, Dutch, Polish, Portuguese, Romanian, Russian, Swedish, Slovak, Slovenian, Spanish, 
+		Turkish, Ukrainian, Vietnamese, Chinese Simplified, Chinese Traditional
+	
+	One pain is that they have a list of country codes which you have to input when using the API (unless using lat/long or city ID), ISO 3166 codes. 
+	But that doesn't sound like it would be too hard to get country to result in ISO code. 
+	Uses Kelvin by default, can change to C or F 
+
+- Darksky.net
+	1000 Calls per day for free, or $0.0001 per call after that 
+	Can return current weather conditions, minute by minute, hour by hour, or day by day forecasts.
+	Only provides severe weather alerts in US, Canada, EU
+	
+	Example result: 
+	{
+          "latitude": 42.3601,
+          "longitude": -71.0589,
+          "timezone": "America/New_York",
+          "currently": {
+              "time": 1509993277,
+              "summary": "Drizzle",
+              "icon": "rain",
+              "nearestStormDistance": 0,
+              "precipIntensity": 0.0089,
+              "precipIntensityError": 0.0046,
+              "precipProbability": 0.9,
+              "precipType": "rain",
+              "temperature": 66.1,
+              "apparentTemperature": 66.31,
+              "dewPoint": 60.77,
+              "humidity": 0.83,
+              "pressure": 1010.34,
+              "windSpeed": 5.59,
+              "windGust": 12.03,
+              "windBearing": 246,
+              "cloudCover": 0.7,
+              "uvIndex": 1,
+              "visibility": 9.84,
+              "ozone": 267.44
+          },
+          "minutely": {
+              "summary": "Light rain stopping in 13 min., starting again 30 min. later.",
+              "icon": "rain",
+              "data": [{
+                  "time": 1509993240,
+                  "precipIntensity": 0.007,
+                  "precipIntensityError": 0.004,
+                  "precipProbability": 0.84,
+                  "precipType": "rain"
+              },
+            ...
+            ]
+          },
+          "hourly": {
+              "summary": "Rain starting later this afternoon, continuing until this evening.",
+              "icon": "rain",
+              "data": [{
+                  "time": 1509991200,
+                  "summary": "Mostly Cloudy",
+                  "icon": "partly-cloudy-day",
+                  "precipIntensity": 0.0007,
+                  "precipProbability": 0.1,
+                  "precipType": "rain",
+                  "temperature": 65.76,
+                  "apparentTemperature": 66.01,
+                  "dewPoint": 60.99,
+                  "humidity": 0.85,
+                  "pressure": 1010.57,
+                  "windSpeed": 4.23,
+                  "windGust": 9.52,
+                  "windBearing": 230,
+                  "cloudCover": 0.62,
+                  "uvIndex": 1,
+                  "visibility": 9.32,
+                  "ozone": 268.95
+              },
+            ...
+            ]
+          },
+         "daily": {
+              "summary": "Mixed precipitation throughout the week, with temperatures falling to 39°F on Saturday.",
+              "icon": "rain",
+              "data": [{
+                  "time": 1509944400,
+                  "summary": "Rain starting in the afternoon, continuing until evening.",
+                  "icon": "rain",
+                  "sunriseTime": 1509967519,
+                  "sunsetTime": 1510003982,
+                  "moonPhase": 0.59,
+                  "precipIntensity": 0.0088,
+                  "precipIntensityMax": 0.0725,
+                  "precipIntensityMaxTime": 1510002000,
+                  "precipProbability": 0.73,
+                  "precipType": "rain",
+                  "temperatureHigh": 66.35,
+                  "temperatureHighTime": 1509994800,
+                  "temperatureLow": 41.28,
+                  "temperatureLowTime": 1510056000,
+                  "apparentTemperatureHigh": 66.53,
+                  "apparentTemperatureHighTime": 1509994800,
+                  "apparentTemperatureLow": 35.74,
+                  "apparentTemperatureLowTime": 1510056000,
+                  "dewPoint": 57.66,
+                  "humidity": 0.86,
+                  "pressure": 1012.93,
+                  "windSpeed": 3.22,
+                  "windGust": 26.32,
+                  "windGustTime": 1510023600,
+                  "windBearing": 270,
+                  "cloudCover": 0.8,
+                  "uvIndex": 2,
+                  "uvIndexTime": 1509987600,
+                  "visibility": 10,
+                  "ozone": 269.45,
+                  "temperatureMin": 52.08,
+                  "temperatureMinTime": 1510027200,
+                  "temperatureMax": 66.35,
+                  "temperatureMaxTime": 1509994800,
+                  "apparentTemperatureMin": 52.08,
+                  "apparentTemperatureMinTime": 1510027200,
+                  "apparentTemperatureMax": 66.53,
+                  "apparentTemperatureMaxTime": 1509994800
+              },
+            ...
+            ]
+          },
+          "alerts": [
+          {
+            "title": "Flood Watch for Mason, WA",
+            "time": 1509993360,
+            "expires": 1510036680,
+            "description": "...FLOOD WATCH REMAINS IN EFFECT THROUGH LATE MONDAY NIGHT...\nTHE FLOOD WATCH CONTINUES FOR\n* A PORTION OF NORTHWEST WASHINGTON...
+		INCLUDING THE FOLLOWING\nCOUNTY...MASON.\n* THROUGH LATE FRIDAY NIGHT\n* A STRONG WARM FRONT WILL BRING HEAVY RAIN TO THE OLYMPICS\nTONIGHT THROUGH THURSDAY NIGHT. 
+		THE HEAVY RAIN WILL PUSH THE\nSKOKOMISH RIVER ABOVE FLOOD STAGE TODAY...AND MAJOR FLOODING IS\nPOSSIBLE.\n* A FLOOD WARNING IS IN EFFECT FOR THE SKOKOMISH RIVER. 
+		THE FLOOD\nWATCH REMAINS IN EFFECT FOR MASON COUNTY FOR THE POSSIBILITY OF\nAREAL FLOODING ASSOCIATED WITH A MAJOR FLOOD.\n",
+            "uri": "http://alerts.weather.gov/cap/wwacapget.php?x=WA1255E4DB8494.FloodWatch.1255E4DCE35CWA.SEWFFASEW.38e78ec64613478bb70fc6ed9c87f6e6"
+          },
+          ...
+          ],
+          {
+            "flags": {
+              "units": "us",
+              ...
+            }
+          }
+
+
+	Requires lat and long coordinates, meaning we would have to get them for the location, not exactly hard to do tho (see Google Maps API or Mapbox API)
+	
+	Also has multiple language support: 
+		Arabic, Azerbaijani, Belarusian, Bulgarian, Bosnian, Catalan, Czech, Danish, German, Greek, English (which is the default), Spanish
+		Estonian, Finnish, French, Hebrew, Croatian, Hungarian, Indonesian, Icelandic, Italian, Japanese, Georgian, Korean, Cornish, Latvian
+		Norwegian Bokmål, Dutch, Norwegian Bokmål (alias for nb), Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Serbian, Swedish
+		Tetum, Turkish, Ukrainian, Igpay Atinlay, simplified Chinese, traditional Chinese
+
+	Fun things: 	automatically selects units based on geographical location 
+			Moon phase might be somewhat useful if you're a werewolf 
+			Nearest Storm Distance
+
+	Get response in UTF-8 encoded JSON 
+
+	DONT pattern match on their summary field, since this is prone to logic changes. However, the 'icon' generated stays the same so use this instead if we were to extract text.
+
+Market Prices
+
+10 Most important crops in the world (Business Insider) 
+1. Corn (large in Sub-Saharan Afica, South America) 
+2. Wheat 
+3. Rice 
+4. Potatoes (Europe, China is largest producer world wide)
+5. Cassava (Africa, South America) 
+6. Soybeans 
+7. Sweet Potatoes (South America, majorly produced by China)
+8. Sorghum 
+9. Yams (West and Central Africa) 
+10. Plantain 
+
+Data Sources: 
+Struggling to find APIs... 
+
+http://www.fao.org/giews/food-prices/tool/public/#/dataset/domestic gives a graph of common commodities in a massive list of countries, but cannot seem to export 
+Barchart API seems to have a lot but don't think its free and only markets seem to be Western 
+
+72 Agriculture APIs: https://www.programmableweb.com/category/agriculture/api
+Loads for types of plants, when to best harvest etc. none for market prices tho...
+
+Food Security Portal 
+- Maize Prices 
+	Brazil; National Average; Yellow Maize; wholesale.
+	Chad; Retail; N'Djamena.
+	Colombia; Bogota; Yellow Maize; wholesale.
+	Costa Rica; National Average; Maize (White); Retail.
+	DR Congo: Bunia: Maize; retail.
+	Dominican Republic; Santo Domingo; Retail.
+	El Salvador: San Salvador; Maize (white), wholesale.
+	Ethiopia: Addis Ababa: Maize; wholesale.
+	Guatemala: Guatemala City, Maize (white); wholesale.
+	Haiti: Port-au-Prince: Maize meal (imported); Retail.
+	Honduras: San Pedro Sula, maize (white), wholesale
+	Kenya; Nairobi: Maize; wholesale.
+	Malawi; Lilongwe: Yellow Maize; retail.
+	Mozambique; Maputo: White Maize; retail
+	Nicaragua; Managua: White Maize; retail
+	Niger: Niamey, Maize, retail.
+	Nigeria; Kano: Maize; Dawanau market; wholesale
+	Panama; Panama City, Maize; retail.
+	Peru; National Average: Yellow Maize; wholesale.
+	Tanzania; Dar es Salaam: Maize; wholesale.
+	Uganda: Kampala; Maize; wholesale.
+	
+- Rice Prices 
+	Bangladesh; Wholesale; National Average.
+	Brazil; Retail; Sao Paulo.
+	Cambodia: Phnom Penh, Rice (mix)
+	Chad; Retail; Rice (local); N'Djamena.
+	China; Wholesale; Hunan: Rice.
+	Colombia; Wholesale; Bogota: Rice (first quality).
+	Costa Rica; National Average; Rice (first quality); Retail.
+	Dominican Republic; Santo Domingo; Rice (first quality); Retail.
+	DR Congo; Retail; Kisangani: Local Rice.
+	El Salvador: San Salvador, Rice; wholesale.
+	Guatemala: Guatemala City, Rice (first quality).
+	Haiti: Rice (imported); Port-au-Prince; Retail.
+	Honduras: Tegucigalpa, Rice (second quality), wholesale.
+	India; Retail; Mumbai: Rice.
+	Indonesia; Retail; National Average (FAO)
+	Laos PDR: National Average, Rice (ordinary)
+	Madagascar; National average; Rice (imported); Retail.
+	Malawi; Retail, Lilongwe: Rice.
+	Mozambique; Retail; Maputo: Rice.
+	Nicaragua; Retail; National average; Rice (first quality).
+	Niger: Niamey, Rice (imported), wholesale.
+	Pakistan; Retail; Karachi: Basmati Rice.
+	Panama; Panama City; Rice (first quality); Wholesale.
+	Peru; Wholesale, National average. (FAO)
+	Tanzania; Wholesale; Dar es Salaam: Rice.
+	Uganda: Kampala, Rice; wholesale.
+	Vietnam; An Giang; Rice (20% broken); wholesale.
+
+- Wheat Prices
+	Bangladesh; Wholesale; National average.
+	Brazil; Wholesale; National average.
+	China; wheat (flour); Retail; Average of market prices in 50 large and medium cities.
+	Colombia; Wholesale; Wheat flour; Bogota.
+	El Salvador: San Salvador, Wheat (flour), wholesale.
+	Ethiopia; Retail; Addis Ababa: Wheat.
+	India; Retail; Mumbai: Wheat.
+	Indonesia; Retail; National average; Wheat flour.
+	Pakistan; Retail; Peshawar: Wheat.
+	Peru; Wholesale; National average; Wheat (durum).
+

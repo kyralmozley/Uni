@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="group27.weatherapp.map_view.MapController"
+            style="-fx-background-color: rgb(170, 218, 255)"
+            fx:id="root">
+    <top>
+        <BorderPane fx:id="headerPane">
+            <BorderPane.margin>
+                <Insets bottom="-10.0" left="25.0" right="25.0" top="10.0"/>
+            </BorderPane.margin>
+            <center>
+                <TextField fx:id="searchTextField" onAction="#searchTextFieldAction" prefHeight="27.0"
+                           promptText="Search Location"/>
+
+            </center>
+            <right>
+                <HBox>
+                    <Button fx:id="searchButton"></Button>
+
+                    <Button fx:id="locationButton"></Button>
+                </HBox>
+            </right>
+        </BorderPane>
+    </top>
+    <bottom>
+        <GoogleMapView fx:id="mapView" minHeight="-Infinity" minWidth="-Infinity" maxHeight="-Infinity"
+                       maxWidth="-Infinity" prefWidth="500" prefHeight="800" AnchorPane.bottomAnchor="0.0"
+                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+
+    </bottom>
+
+
+</BorderPane>

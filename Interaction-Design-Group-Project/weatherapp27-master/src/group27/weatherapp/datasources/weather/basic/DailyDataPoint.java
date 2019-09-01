@@ -1,0 +1,44 @@
+package group27.weatherapp.datasources.weather.basic;
+
+class DailyDataPoint {
+    int time;
+    String summary;
+    String icon;
+    int sunriseTime;
+    int sunsetTime;
+    double moonPhase;
+    double precipIntensity;
+    double precipIntensityMax;
+    int precipIntensityMaxTime;
+    double precipProbability;
+    double precipAccumulation;
+    String precipType;
+    double temperatureHigh;
+    int temperatureHighTime;
+    double temperatureLow;
+    int temperatureLowTime;
+    double apparentTemperatureHigh;
+    int apparentTemperatureHighTime;
+    double apparentTemperatureLow;
+    int apparentTemperatureLowTime;
+    double dewPoint;
+    double humidity;
+    double pressure;
+    double windSpeed;
+    double windGust;
+    int windGustTime;
+    int windBearing;
+    double cloudCover;
+    int uvIndex;
+    int uvIndexTime;
+    double visibility;
+    double ozone;
+    double temperatureMin;
+    int temperatureMinTime;
+    double temperatureMax;
+    int temperatureMaxTime;
+    double apparentTemperatureMin;
+    int apparentTemperatureMinTime;
+    double apparentTemperatureMax;
+    int apparentTemperatureMaxTime;
+}

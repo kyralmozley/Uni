@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="group27.weatherapp.weather_view.WeatherController"
+
+            fx:id="root"
+id="root">
+    <top>
+        <BorderPane fx:id="headerPane">
+            <left>
+                <Button fx:id="backBtn">Back</Button>
+            </left>
+            <center>
+                <VBox alignment="CENTER">
+                    <Text fx:id="headerTxt">Weather View</Text>
+                    <Text fx:id="dateTxt">Date</Text>
+                </VBox>
+            </center>
+        </BorderPane>
+    </top>
+
+    <bottom>
+        <BorderPane fx:id="footerPane">
+            <left>
+                <Button fx:id="prevDayBtn" visible="false"></Button>
+            </left>
+            <center>
+                <Slider fx:id="dateSlider" min="0" max="24" showTickMarks="true" showTickLabels="true" majorTickUnit="3"
+                        minorTickCount="0" snapToTicks="true" value="9">
+                    <BorderPane.margin>
+                        <Insets left="15.0" right="15.0"/>
+                    </BorderPane.margin>
+                </Slider>
+            </center>
+            <right>
+                <Button fx:id="nextDayBtn"></Button>
+            </right>
+            <bottom>
+                <Text style="-fx-font-size: 10; -fx-fill: #AAAAAA">
+                    Powered by DarkSky and Met Office DataPoint
+                </Text>
+            </bottom>
+        </BorderPane>
+    </bottom>
+</BorderPane>

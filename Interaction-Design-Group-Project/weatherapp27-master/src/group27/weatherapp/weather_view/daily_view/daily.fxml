@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ScrollPane?>
+<HBox fx:id="rootContainer" xmlns:fx="http://javafx.com/fxml" fx:controller="group27.weatherapp.weather_view.daily_view.DailyController">
+   <Region HBox.hgrow="ALWAYS" />
+   <VBox style="-fx-padding: 0 0 10 0;">
+      <HBox alignment="CENTER">
+         <ImageView fx:id="weatherIcon" fitWidth="200" fitHeight="200" />
+         <Text fx:id="temp" style="-fx-font: 40 arial"/>
+      </HBox>
+      <HBox fx:id="detailsBox" alignment="CENTER">
+         <ScrollPane fx:id="scrollpane" pannable="true">
+            <Text fx:id="forecastDetails"
+                  style="-fx-font: 16 arial;"
+                  lineSpacing="7"
+                  wrappingWidth="400">
+            </Text>
+         </ScrollPane>
+      </HBox>
+   </VBox>
+   <Region HBox.hgrow="ALWAYS" />
+</HBox>

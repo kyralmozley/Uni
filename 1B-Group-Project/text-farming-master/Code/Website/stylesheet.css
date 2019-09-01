@@ -1,0 +1,188 @@
+/*
+CREATED BY KYRA MOZLEY
+FOR TEXT FARMING
+COMPUTER SCIENCE 1B GROUP PROJECT
+*/
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F2F4F3;
+}
+
+nav {
+  height: 90px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+nav li {
+  float: left;
+  list-style-type: none;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  color: #8ACB88;
+  text-decoration: underline;
+}
+
+nav .signin {
+  float: right;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: block;
+  margin-top: -5px;
+}
+nav .signin form {
+  float: left;
+}
+nav .signin button {
+  background-color: #8ACB88;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin-top: -25px;
+
+}
+nav  a {
+  color: white;
+  text-align: center;
+  padding-right: 20px;
+  text-decoration: none;
+}
+.signup-container {
+  padding-top: 20px;
+  margin: auto;
+  width:50%;
+  text-align: center;
+}
+.signup input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+.signup button {
+  background-color: #8ACB88;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px;
+}
+p {
+  text-align: center;
+}
+.hidden {
+  display: none !important;
+}
+/*****************************
+****  INDEX / LOGIN PAGE *****
+*****************************/
+.container {
+  text-align: center;
+  left:50%;
+  top:50%;
+  height: 99vh;
+  width: 99vw;
+  overflow: hidden;
+}
+.container form {
+  margin-top: 10%;
+}
+.container h1 {
+  font-family: 'Lora', serif;
+  font-size: 4em;
+  color: #8ACB88;
+  text-shadow: 0.5px 0.5px black;
+}
+.container form h2 {
+  font-size: 2em;
+}
+.container form {
+  width: 100%;
+}
+.container form input {
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-bottom: 2px solid #8ACB88;
+  font-size: 1em;
+  text-align: center;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #F2F4F3 inset !important;
+}
+.container button {
+  background-color: #8ACB88;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+/*****************************
+*******  MESSAGE PAGE ********
+*****************************/
+.message {
+  text-align: center;
+  left:50%;
+  top:50%;
+  height: 99vh;
+  width: 99vw;
+  overflow: hidden;
+}
+.message h1 {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+}
+.message form {
+  width: 100%;
+  padding-top: 20px;
+}
+.message form input, .message textarea {
+  width: 30%;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #8ACB88;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.message button {
+  background-color: #8ACB88;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+input:focus, textarea:fo {
+    outline: none !important;
+    border:1px solid #8ACB88;
+    box-shadow: 0 0 10px #8ACB88;
+}
