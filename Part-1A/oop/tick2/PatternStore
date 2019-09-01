@@ -1,0 +1,37 @@
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+public class PatternStore {
+
+   public PatternStore(String source) throws IOException {
+       if (source.startsWith("http://")) {
+          loadFromURL(source);
+       }
+       else {
+          loadFromDisk(source);
+    }
+   }
+
+   public PatternStore(Reader source) throws IOException {
+      load(source);
+   }
+
+   private void load(Reader r) throws IOException {
+      // TODO: read each line from the reader and print it to the screen
+   }
+
+
+   private void loadFromURL(String url) throws IOException {
+    // TODO: Create a Reader for the URL and then call load on it
+   }
+
+   private void loadFromDisk(String filename) throws IOException {
+    // TODO: Create a Reader for the file and then call load on it
+   }
+
+   public static void main(String args[]) {
+      PatternStore p =
+       new PatternStore(args[0]);
+   }
+}

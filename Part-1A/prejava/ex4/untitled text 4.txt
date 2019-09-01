@@ -1,0 +1,39 @@
+package uk.ac.cam.km687.prejava.ex4;
+
+public class FibonacciCache {
+
+   // Uninitialised array
+   public static long[] fib = null;
+
+   public static void store() {
+      //TODO: throw an Exception with a suitable message if fib is null
+      
+      //TODO: using a for loop, fill "fib" with the Fibonacci numbers 
+      //      e.g. if length of "fib" is zero, store nothing; and
+      //           if length is six, store 1,1,2,3,5,8 in "fib"
+   }
+
+   public static void reset(int cachesize) {
+      //TODO: make fib point to a new array of length cachesize
+      //TODO: using a for loop, set all the elements of fib to zero
+   }
+ 
+   public static long get(int i) /*TODO: declare the exception*/ {
+      //TODO: throw an Exception with a suitable message if fib is null
+
+      //TODO: return the value of the element in fib found at index i
+      //      e.g. "get(3)" should return the fourth element of fib
+
+      //TODO: your code should throw an Exception with a suitable message
+      // if the value requested is out of bounds of the array
+   }
+
+   public static void main(String[] args) {
+      //TODO: catch exceptions as appropriate and print error messages
+      reset(20);
+      store();
+      int i = Integer.decode(args[0]);
+      System.out.println(get(i));
+   }
+  
+}

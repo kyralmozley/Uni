@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" xml:lang="en">
+    <head>
+        <title>Computer Science Paper 1 (IA) Algorithms Tick 1 Edit</title>
+        <link rel="shortcut icon" href="https://www.vle.cam.ac.uk/theme/image.php/cambridge/theme/1516096102/favicon" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Computer Science Paper 1 (IA) Algorithms Tick 1 Edit" />
+<link rel="stylesheet" type="text/css" href="https://www.vle.cam.ac.uk/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://www.vle.cam.ac.uk/theme/styles.php/cambridge/1516096102/all" />
+<link rel="stylesheet" type="text/css" href="https://www.vle.cam.ac.uk/mod/vpl/editor/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="https://www.vle.cam.ac.uk/mod/vpl/editor/jquery/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="https://www.vle.cam.ac.uk/mod/vpl/editor/VPLIDE.css" />
+<link rel="stylesheet" type="text/css" href="https://www.vle.cam.ac.uk/blocks/accessibility/userstyles.php?instance_id=358011" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/www.vle.cam.ac.uk","sesskey":"PYfUCgi86A","loadingicon":"https:\/\/www.vle.cam.ac.uk\/theme\/image.php\/cambridge\/core\/1516096102\/i\/loading_small","themerev":"1516096102","slasharguments":1,"theme":"cambridge","jsrev":"1516096102","admin":"admin","svgicons":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/www.vle.cam.ac.uk\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/www.vle.cam.ac.uk\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/www.vle.cam.ac.uk\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/www.vle.cam.ac.uk\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/www.vle.cam.ac.uk\/theme\/yui_combo.php?m\/1516096102\/","combine":true,"comboBase":"https:\/\/www.vle.cam.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"m\/1516096102\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-formautosubmit":{"requires":["base","event-key"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-calendar-info":{"requires":["base","node","event-mouseenter","event-key","overlay","moodle-calendar-info-skin"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-toolboxes":{"requires":["node","base","event-key","node","io","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_role-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_hsuforum-article":{"requires":["base","node","event","router","core_rating","querystring","moodle-mod_hsuforum-io","moodle-mod_hsuforum-livelog","moodle-core-formchangechecker"]},"moodle-mod_hsuforum-livelog":{"requires":["widget"]},"moodle-mod_hsuforum-io":{"requires":["base","io-base","io-form","io-upload-iframe","json-parse"]},"moodle-mod_oublog-tagselector":{"requires":["base","node","autocomplete","autocomplete-filters","autocomplete-highlighters"]},"moodle-mod_oublog-savecheck":{"requires":["base","node","io","panel","moodle-core-notification-alert"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-core-notification-dialogue"]},"moodle-mod_quiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-limitchoices":{"requires":["base","node","event"]},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_chemistry-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_hr-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_htmlplus-beautify":{},"moodle-atto_htmlplus-codemirror":{"requires":["moodle-atto_htmlplus-codemirror-skin"]},"moodle-atto_htmlplus-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_htmlplus-beautify","moodle-atto_htmlplus-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_panoptobutton-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/www.vle.cam.ac.uk\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/www.vle.cam.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1516096102\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/www.vle.cam.ac.uk\/lib\/javascript.php\/1516096102\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/www.vle.cam.ac.uk\/lib\/javascript.php\/1516096102\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?delayStartupUntil=configured"},"block_accessibility":{"name":"block_accessibility","fullpath":"https:\/\/www.vle.cam.ac.uk\/lib\/javascript.php\/1516096102\/blocks\/accessibility\/module.js","requires":["base","node","stylesheet"]}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body  id="page-mod-vpl-forms-edit" class="format-flexsections  path-mod path-mod-vpl path-mod-vpl-forms safari dir-ltr lang-en yui-skin-sam yui3-skin-sam www-vle-cam-ac-uk pagelayout-incourse course-140952 context-9683282 cmid-6783322 category-6692 has-region-side-pre used-region-side-pre has-region-side-post empty-region-side-post side-pre-only">
+        <div class="skiplinks">
+    <a href="#maincontent" class="skip">Skip to main content</a>
+</div><script type="text/javascript" src="https://www.vle.cam.ac.uk/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js&amp;rollup/1516096102/mcore-min.js"></script><script type="text/javascript" src="https://www.vle.cam.ac.uk/lib/javascript.php/1516096102/lib/javascript-static.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/jquery/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/jquery/jquery-ui-1.10.3.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/VPL_jquery_no_conflict.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/noVNC/include/util.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+        <div class="cam-wrapper">
+            <header>
+                <div id="page-header-top" class="clearfix">
+                    <div class="headermenu">
+                        <div class="usermenu"><div class="moodle-actionmenu nowrap-items" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+        <ul class="menubar" id="action-menu-0-menubar" role="menubar">
+
+            <!--
+
+            --><!--
+
+            --><li role="presentation"><a href="#" class="toggle-display textmenu" id="action-menu-toggle-0" title="" role="menuitem"><span class="userbutton"><span class="usertext">Kyra Mozley</span><span class="avatars"><span class="avatar current"><img src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/u/f2" alt="Picture of Kyra Mozley" title="Picture of Kyra Mozley" class="userpicture defaultuserpic" width="35" height="35" role="presentation" /></span></span></span><b class="caret"></b></a></li>
+
+        </ul>
+
+
+        <ul class="menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+            <li role="presentation">    <a href="https://www.vle.cam.ac.uk/my/" class="icon menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1"><img class="iconsmall" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/course"/><span class="menu-action-text" id="actionmenuaction-1">Dashboard</span></a>
+
+
+
+
+</li><li role="presentation">
+<span class="filler">&nbsp;</span>
+
+
+</li><li role="presentation">    <a href="https://www.vle.cam.ac.uk/user/profile.php?id=722951" class="icon menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2"><img class="iconsmall" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/user"/><span class="menu-action-text" id="actionmenuaction-2">Profile</span></a>
+
+
+
+
+</li><li role="presentation">    <a href="https://www.vle.cam.ac.uk/grade/report/overview/index.php" class="icon menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3"><img class="iconsmall" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/t/grades"/><span class="menu-action-text" id="actionmenuaction-3">Grades</span></a>
+
+
+
+
+</li><li role="presentation">    <a href="https://www.vle.cam.ac.uk/message/index.php" class="icon menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4"><img class="iconsmall" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/t/message"/><span class="menu-action-text" id="actionmenuaction-4">Messages</span></a>
+
+
+
+
+</li><li role="presentation">    <a href="https://www.vle.cam.ac.uk/user/preferences.php" class="icon menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5"><img class="iconsmall" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/t/preferences"/><span class="menu-action-text" id="actionmenuaction-5">Preferences</span></a>
+
+
+
+
+</li><li role="presentation">
+<span class="filler">&nbsp;</span>
+
+
+</li><li role="presentation">    <a href="https://www.vle.cam.ac.uk/login/logout.php?sesskey=PYfUCgi86A" class="icon menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6"><img class="iconsmall" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/a/logout"/><span class="menu-action-text" id="actionmenuaction-6">Log out</span></a>
+
+
+
+
+</li>
+        </ul>
+</div></div>                    </div>
+                    <div id="headerlogo">
+                        <a href="http://www.cam.ac.uk/">
+                            <img src="https://www.vle.cam.ac.uk/theme/cambridge/pix/logo.png" alt="University of Cambridge logo" width=170px;>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="myclear"></div>
+            <header role="banner" class="navbar  moodle-has-zindex">
+                <nav role="navigation" class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="brand" href="https://www.vle.cam.ac.uk">
+                            Moodle                        </a>
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <!-- New notifications and messages menus in Moodle 3.2 -->
+                        <div class="popover-region collapsed popover-region-messages"
+    id="nav-message-popover-container" data-userid="722951"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5a6f082cdc7ab5a6f082cd48b648"
+        aria-haspopup="true"
+        aria-label="Show message window with no new messages"
+        tabindex="0">
+                <img class="smallicon" alt=" Toggle messages menu " title=" Toggle messages menu " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/t/message"/>
+        <div class="count-container hidden" data-region="count-container"></div>
+
+    </div>
+    <div 
+        id="popover-region-container-5a6f082cdc7ab5a6f082cd48b648"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Notification window"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Messages</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="newmessage-link">
+                <a href="https://www.vle.cam.ac.uk/message/index.php?contactsfirst=1">New message
+                </a>
+        </div>
+        <div class="hover-tooltip-container">
+                    <a class="mark-all-read-button"
+                    href="#"
+                    role="button"
+                    title="Mark all as read"
+                    data-action="mark-all-read">
+                    <span class="normal-icon"><img class="smallicon" alt=" Mark all as read " title=" Mark all as read " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/t/markasread"/></span>
+                    <span class="loading-icon"><img class="smallicon" alt=" Loading " title=" Loading " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/y/loading"/></span>
+                </a>
+
+    <div class="hover-tooltip">
+        Mark all as read
+    </div>
+</div>
+        <div class="hover-tooltip-container">
+                    <a href="https://www.vle.cam.ac.uk/message/edit.php?id=722951"
+                    title="Message preferences">
+                    <img class="smallicon" alt=" Message preferences " title=" Message preferences " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/settings"/>
+                </a>
+
+    <div class="hover-tooltip">
+        Message preferences
+    </div>
+</div>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="messages" data-region="messages" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" data-region="empty-message" tabindex="0">No messages</div>
+
+            </div>
+            <span class="loading-icon"><img class="smallicon" alt=" Loading " title=" Loading " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/y/loading"/></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://www.vle.cam.ac.uk/message/index.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="722951"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5a6f082cdea615a6f082cd48b649"
+        aria-haspopup="true"
+        aria-label="Show notification window with no new notifications"
+        tabindex="0">
+                <img class="smallicon" alt=" Toggle notifications menu " title=" Toggle notifications menu " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/notifications"/>
+        <div class="count-container hidden" data-region="count-container"></div>
+
+    </div>
+    <div 
+        id="popover-region-container-5a6f082cdea615a6f082cd48b649"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Notification window"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="hover-tooltip-container">
+                    <a class="mark-all-read-button"
+                    href="#"
+                    title="Mark all as read"
+                    data-action="mark-all-read"
+                    role="button">
+                    <span class="normal-icon"><img class="smallicon" alt=" Mark all as read " title=" Mark all as read " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/t/markasread"/></span>
+                    <span class="loading-icon"><img class="smallicon" alt=" Loading " title=" Loading " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/y/loading"/></span>
+                </a>
+
+    <div class="hover-tooltip">
+        Mark all as read
+    </div>
+</div>
+        <div class="hover-tooltip-container">
+                    <a href="https://www.vle.cam.ac.uk/message/notificationpreferences.php?userid=722951"
+                    title="Notification preferences">
+                    <img class="smallicon" alt=" Notification preferences " title=" Notification preferences " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/settings"/>
+                </a>
+
+    <div class="hover-tooltip">
+        Notification preferences
+    </div>
+</div>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">You have no notifications</div>
+
+            </div>
+            <span class="loading-icon"><img class="smallicon" alt=" Loading " title=" Loading " src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/y/loading"/></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://www.vle.cam.ac.uk/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div>                        <div class="nav-collapse collapse">
+                            <ul class="nav"><li><a title="Home" href="https://www.vle.cam.ac.uk">Home</a></li><li><a title="Copyright guidance" href="http://www.student-systems.admin.cam.ac.uk/moodle/copyright">Copyright guidance</a></li><li><a title="Plagiarism guidance" href="http://www.admin.cam.ac.uk/univ/plagiarism/">Plagiarism guidance</a></li><li class="dropdown"><a href="#cm_submenu_6" class="dropdown-toggle" data-toggle="dropdown" title="Disabled students">Disabled students<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="Teaching disabled students" href="http://www.disability.admin.cam.ac.uk/teaching-disabled-students"> Disability Resource Centre</a></li><li><a title="Free AT software" href="http://www.ucs.cam.ac.uk/support/assistive-technology/freeatsoftware"> Assistive technology</a></li><li><a title="View when logged in to Moodle" href="https://www.vle.cam.ac.uk/course/view.php?id=81751"> Moodle accessibility features</a></li><li><a title="Making your computer easier to use" href="https://mcmw.abilitynet.org.uk/"> AbilityNet</a></li></ul><li class="dropdown"><a href="#cm_submenu_7" class="dropdown-toggle" data-toggle="dropdown" title="University resources">University resources<b class="caret"></b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a href="#cm_submenu_8" class="dropdown-toggle" data-toggle="dropdown" title=" Libraries"> Libraries</a><ul class="dropdown-menu"><li><a title=" Cambridge university library" href="http://www.lib.cam.ac.uk/"> Cambridge university library</a></li><li><a title="Links to other Libraries" href="http://www.lib.cam.ac.uk/camlibraries/index.php"> Libraries gateway</a></li></ul><li><a title=" Museums and collections" href="http://www.cam.ac.uk/museums-and-collections"> Museums and collections</a></li><li><a title="The University video/audio file library" href="http://www.sms.cam.ac.uk/"> Streaming Media Service (SMS)</a></li><li><a title="Talks and lectures you can attend" href="http://talks.cam.ac.uk/"> Talks.cam</a></li></ul><li class="dropdown"><a href="#cm_submenu_9" class="dropdown-toggle" data-toggle="dropdown" title="Cambridge student systems">Cambridge student systems<b class="caret"></b></a><ul class="dropdown-menu"><li><a title=" For current students" href="http://www.cam.ac.uk/current-students"> For current students</a></li><li><a title="Student record system" href="http://www.camsis.cam.ac.uk/cam-only/index.shtml"> CamSIS</a></li><li><a title="Undergraduate supervision reporting system" href="http://www.camcors.cam.ac.uk/"> CamCORS</a></li><li><a title=" Graduate supervision reporting system" href="http://www.admin.cam.ac.uk/students/studentregistry/staff/grad/supervisors/cgsrs/"> Graduate supervision reporting system</a></li></ul><li><a title="Course history" href="https://archive.vle.cam.ac.uk">Course history</a></li><li class="dropdown"><a href="#cm_submenu_10" class="dropdown-toggle" data-toggle="dropdown" title="Moodle help">Moodle help<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="View when logged in to Moodle" href="https://www.vle.cam.ac.uk/course/view.php?id=115071"> Help for staff</a></li><li><a title="View when logged in to Moodle" href="https://www.vle.cam.ac.uk/course/view.php?id=81351"> Help for students</a></li><li><a title="View when logged in to Moodle" href="https://www.vle.cam.ac.uk/course/view.php?id=117281"> Good practice</a></li><li><a title="View when logged in to Moodle" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=40"> Examples and case studies</a></li><li><a title="View when logged in to Moodle" href="https://www.vle.cam.ac.uk/course/view.php?id=65572"> Moodle helpdesk</a></li><li><a title=" Moodle training" href="http://www.training.cam.ac.uk/studentsystems/theme/moodle?providerId=1144872"> Moodle training</a></li></ul></ul>                            <ul class="nav pull-right">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div> 
+                </nav>
+            </header>
+
+            <div id="page" class="container-fluid">       
+                <header id="page-header" class="clearfix">
+                    <h1>Computer Science Paper 1 (IA)</h1>                    <div id="page-navbar" class="clearfix">
+                        <nav class="breadcrumb-nav">
+                            <span class="accesshide">Page path</span><ul class="breadcrumb"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://www.vle.cam.ac.uk/my/"><span itemprop="title">Dashboard</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span tabindex="0">My courses</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=35"><span itemprop="title">Schools, Faculties and Departments</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=6191"><span itemprop="title">Computer Laboratory </span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=6692"><span itemprop="title">Part IA</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="Computer Science Paper 1 (IA)" href="https://www.vle.cam.ac.uk/course/view.php?id=140952"><span itemprop="title">Computer Science Paper 1 (IA)</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://www.vle.cam.ac.uk/course/view.php?id=140952&amp;sectionid=1878752"><span itemprop="title">Algorithms</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span tabindex="0">Ticks</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span tabindex="0">Tick 1</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25B6;&#xFE0E;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://www.vle.cam.ac.uk/mod/vpl/view.php?id=6783322"><span itemprop="title">Algorithms Tick 1</span></a></span></li></ul>                        </nav>
+                        <div class="breadcrumb-button"></div>
+                    </div>
+                    
+                    <div id="course-header">
+                                            </div>
+                </header>
+                <div id="page-content" class="row-fluid">
+                    <div id="region-bs-main-and-pre" class="span9">
+                        <div class="row-fluid">
+                            <section id="region-main" class="span8 pull-right">
+                                <span class="notifications" id="user-notifications"></span><div class="course-content-header"><div class="header backto"><a href="https://www.vle.cam.ac.uk/course/view.php?id=140952&amp;sectionid=1878752#section-24"><img class="smallicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/t/up"/><span class="backto-text">Back to 'Tick 1'</span></a></div></div><div role="main"><span id="maincontent"></span><ul class="nav nav-tabs"><li><a href="https://www.vle.cam.ac.uk/mod/vpl/view.php?id=6783322&amp;userid=722951" title="Description">Description</a></li><li><a href="https://www.vle.cam.ac.uk/mod/vpl/forms/submission.php?id=6783322&amp;userid=722951" title="Submission">Submission</a></li><li class="active"><a>Edit</a></li><li><a href="https://www.vle.cam.ac.uk/mod/vpl/forms/submissionview.php?id=6783322&amp;userid=722951" title="Submission view">Submission view</a></li></ul><div class="box generalbox"><div id="vplide" class="vpl_ide vpl_ide_root ui-widget">
+    <div id="vpl_menu" class="vpl_ide_menu"></div>
+    <div id="vpl_tr" class="vpl_ide_tr">
+        <div id="vpl_filelist" style="display: none;">
+            <div id="vpl_filelist_header">File list</div>
+            <div id="vpl_filelist_content"></div>
+        </div>
+        <div id="vpl_tabs" class="vpl_ide_tabs">
+            <div id="vpl_tabs_scroll">
+                <ul id="vpl_tabs_ul"></ul>
+            </div>
+        </div>
+        <div id="vpl_results" class="vpl_ide_results">
+            <div id="vpl_results_accordion"></div>
+        </div>
+    </div>
+    <div id="vpl_ide_dialog_new" class="vpl_ide_dialog"
+        style="display: none;">
+        <fieldset>
+            <label for="vpl_ide_input_newfilename">
+                New file name</label> <input
+                type="text" id="vpl_ide_input_newfilename"
+                name="vpl_ide_input_newfilename" value=""
+                class="ui-widget-content ui-corner-all" autofocus /><br />
+        </fieldset>
+    </div>
+    <div id="vpl_ide_dialog_rename" class="vpl_ide_dialog"
+        style="display: none;">
+        <fieldset>
+            <label for="vpl_ide_input_renamefilename">
+                Rename</label> <input
+                type="text" id="vpl_ide_input_renamefilename"
+                name="vpl_ide_input_renamefilename" value=""
+                class="ui-widget-content ui-corner-all" autofocus /><br />
+        </fieldset>
+    </div>
+    <div id="vpl_ide_dialog_delete" class="vpl_ide_dialog"
+        style="display: none;">
+        <fieldset>
+            <label for="vpl_ide_input_deletefilename">
+                Delete</label> <input
+                type="text" id="vpl_ide_input_deletefilename"
+                name="vpl_ide_input_deletefilename" value=""
+                class="ui-widget-content ui-corner-all" autofocus /><br />
+        </fieldset>
+    </div>
+    <div id="vpl_ide_dialog_sort" class="vpl_ide_dialog"
+        style="display: none;">
+        <ol id="vpl_sort_list"></ol>
+    </div>
+    <div id="vpl_ide_dialog_comments" class="vpl_ide_dialog"
+        style="display: none;">
+        <fieldset>
+            <label for="vpl_ide_input_comments">
+                Comments</label> <textarea
+                id="vpl_ide_input_comments" name="vpl_ide_input_comments"
+                class="ui-widget-content ui-corner-all" autofocus ></textarea>
+        </fieldset>
+    </div>
+    <div id="vpl_ide_dialog_about" class="vpl_ide_dialog"
+        style="display: none;">
+        <div class="vpl_ide_dialog_content">
+        <h3>IDE for VPL</h3>
+        This IDE is part of VPL <a href="http://vpl.dis.ulpgc.es"
+            target="_blank">Virtual Programming Lab for Moodle</a><br /> Author:
+        Juan Carlos Rodríguez del Pino &lt;jcrodriguez@dis.ulpgc.es&gt;<br />
+        Licence: <a href="http://www.gnu.org/copyleft/gpl.html"
+            target="_blank">GNU GPL v3</a><br /> This software uses/includes the
+        following software under the corresponding licence:
+        <ul>
+            <li><a href="http://ace.c9.io" target="_blank">ACE</a>: an embeddable
+                code editor written in JavaScript. Copyright (c) 2010, Ajax.org B.V.
+                (<a href="../editor/ace9/LICENSE" target="_blank">licence</a>)</li>
+            <li><a href="https://github.com/chjj/term.js/" target="_blank">term.js</a>:
+                A full xterm clone written in javascript. Copyright (c) 2012-2013,
+                Christopher Jeffrey (MIT License)</li>
+            <li><a href="http://kanaka.github.io/noVNC/" target="_blank">noVNC</a>:
+                VNC client using HTML5 (WebSockets, Canvas). noVNC is Copyright (C)
+                2011 Joel Martin &lt;github@martintribe.org&gt; (<a
+                href="../editor/noVNC/LICENSE.txt" target="_blank">licence</a>)</li>
+            <li><a href="http://jquery.com/" target="_blank">jQuery and JQuery-ui</a>:
+                jQuery is a fast, small, and feature-rich JavaScript library.
+                Copyright The jQuery Foundation. (<a
+                href="../editor/jquery/MIT-LICENSE.txt">licence</a>)</li>
+            <li><a href="http://fontawesome.io">Font Awesome</a> by Dave Gandy</li>
+            <li>unzip.js August Lilleaas</li>
+            <li>inflate.js August Lilleaas and Masanao Izumo <iz@onicos.co.jp></li>
+        </ul>
+        </div>
+    </div>
+    <form style="display: none;">
+        <input type="file" multiple="multiple" id="vpl_ide_input_file" />
+    </form>
+    <div id="vpl_ide_dialog_shortcuts" class="vpl_ide_dialog" style="display: none;" >
+        <div class="vpl_ide_dialog_content"></div>
+    </div>
+    <div id="vpl_dialog_terminal" style="display: none;">
+        <pre id="vpl_terminal" class="vpl_terminal"></pre>
+    </div>
+    <div id="vpl_dialog_terminal_clipboard" class="vpl_ide_dialog vpl_clipboard" style="display: none;">
+        <div class="vpl_clipboard_label1"></div><br />
+        <textarea readonly="readonly" class="vpl_clipboard_entry1"></textarea><br />
+        <div class="vpl_clipboard_label2"></div><br />
+        <textarea class="vpl_clipboard_entry2"></textarea>
+    </div>
+    <div id="vpl_dialog_vnc_clipboard" class="vpl_ide_dialog vpl_clipboard" style="display: none;">
+        <div class="vpl_clipboard_label1"></div><br />
+        <textarea readonly="readonly" class="vpl_clipboard_entry1"></textarea><br />
+        <div class="vpl_clipboard_label2"></div><br />
+        <textarea class="vpl_clipboard_entry2"></textarea>
+    </div>
+    <div id="vpl_dialog_vnc" style="display: none;">
+        <canvas class="vpl_noVNC_canvas">
+                Canvas not supported.
+         </canvas>
+    </div>
+</div>
+<script>
+    INCLUDE_URI="../editor/noVNC/include/";
+    Util.load_scripts(["webutil.js", "base64.js", "websock.js", "des.js",
+                       "keysymdef.js", "keyboard.js", "input.js", "display.js",
+                       "jsunzip.js", "rfb.js", "keysym.js"]);
+    $JQVPL(document).ready(function(){
+        $JQVPL("#page-footer").hide();
+        vpl_ide = new VPL_IDE('vplide',{"id":6783322,"restrictededitor":false,"save":true,"run":false,"debug":false,"evaluate":true,"example":false,"comments":true,"ajaxurl":"edit.json.php?id=6783322&userid=722951&action=","download":"..\/views\/downloadsubmission.php?id=6783322&userid=722951","resetfiles":false,"maxfiles":1,"minfiles":1,"saved":true,"i18n":{"about":"About","acceptcertificates":"Accept self signed certificates","acceptcertificatesnote":"<p>You are using an encrypted connection.<p\/>\n<p>To use an encrypted connection with the execution servers it is required you accept its certificates.<\/p>\n<p>If you have problems with this process, you can try to use a http (unencrypted) connection or other browser.<\/p>\n<p>Please, click on the following links (server #) and accept the offered certificate.<\/p>","binaryfile":"Binary File","browserupdate":"Please update your browser to the last version<br \/>or use another that supports Websocket.","changesNotSaved":"Changes have not been saved","clipboard":"Clipboard","comments":"Comments","compilation":"Compilation","connected":"connected","connecting":"connecting","connection_closed":"connection closed","connection_fail":"connection fail","console":"Console","copy":"Copy","create_new_file":"Create a new file","cut":"Cut","debug":"Debug","debugging":"Debugging","delete":"Delete","delete_file_fq":"delete '{$a}' file?","delete_file_q":"Delete file?","download":"Download","edit":"Edit","evaluate":"Evaluate","evaluating":"Evaluating","execution":"Execution","getjails":"Get execution servers","file":"File","filelist":"File list","filenotadded":"File has not been added","filenotdeleted":"The '{$a}' file has NOT been deleted","filenotrenamed":"The '{$a}' file has NOT been renamed","find":"Find","find_replace":"Find\/Replace","fullscreen":"Fullscreen","incorrect_file_name":"Incorrect file name","keyboard":"Keyboard","maxfilesexceeded":"Maximum number of files exceeded","new":"New","next":"Next","load":"Load","loading":"Loading","options":"Options","outofmemory":"Out of memory","paste":"Paste","print":"Print","redo":"Redo","regularscreen":"Regular screen","rename":"Rename","rename_file":"Rename file","resetfiles":"Reset files","retrieve":"Retrieve results","run":"Run","running":"Running","save":"Save","saving":"Saving","select_all":"Select all","shortcuts":"Keyboard shortcuts","sureresetfiles":"Do you want to lost all your work and reset the files to its original state?","timeleft":"Time left","timeout":"Timeout","undo":"Undo","cancel":"Cancel","closebuttontitle":"Close","error":"Error","import":"Import","modified":"Modified","notice":"Notice","ok":"OK","required":"Required","sort":"Sort","warning":"Warning","close":"Close"}});
+        $JQVPL("head").append('<meta name="viewport" content="initial-scale=1">');
+        $JQVPL("head").append('<meta name="viewport" width="device-width">');
+    });
+    </script>
+</div><div style="float:right; right:10px; padding:8px; background-color: white;text-align:center;"><a href="http://vpl.dis.ulpgc.es/">VPL 3.2.4</a></div></div>                            </section>
+                            <aside id="block-region-side-pre" class="span4 desktop-first-column block-region" data-blockregion="side-pre" data-droptarget="1"><a class="skip skip-block" id="fsb-1" href="#sb-1">Skip Navigation</a><div id="inst32" class="block_navigation  block" role="navigation" data-block="navigation" data-instanceid="32" aria-labelledby="instance-32-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-32-header">Navigation</h2></div></div><div class="content"><ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/nav_loader"><li class="type_unknown depth_1 contains_branch" aria-labelledby="label_1_1"><p class="tree_item branch navigation_node" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b61_group" data-collapsible="false"><a tabindex="-1" id="label_1_1" href="https://www.vle.cam.ac.uk/my/">Dashboard</a></p><ul id="random5a6f082cd48b61_group" role="group"><li class="type_setting depth_2 item_with_icon" aria-labelledby="label_2_2"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_2_2" href="https://www.vle.cam.ac.uk/?redirect=0"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Site home</span></a></p></li><li class="type_course depth_2 contains_branch" aria-labelledby="label_2_3"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b63_group"><span tabindex="-1" id="label_2_3" title="Moodle">Site pages</span></p><ul id="random5a6f082cd48b63_group" role="group" aria-hidden="true"><li class="type_unknown depth_3 item_with_icon" aria-labelledby="label_3_5"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_5" href="https://www.vle.cam.ac.uk/blog/index.php"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Site blogs</span></a></p></li><li class="type_setting depth_3 item_with_icon" aria-labelledby="label_3_6"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_6" href="https://www.vle.cam.ac.uk/tag/search.php"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Tags</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_7"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_7" href="https://www.vle.cam.ac.uk/calendar/view.php?view=month"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Calendar</span></a></p></li></ul></li><li class="type_system depth_2 contains_branch" aria-labelledby="label_2_11"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b67_group"><span tabindex="-1" id="label_2_11">My courses</span></p><ul id="random5a6f082cd48b67_group" role="group"><li class="type_unknown depth_3 contains_branch" aria-labelledby="label_3_12"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b68_group"><a tabindex="-1" id="label_3_12" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=35">Schools, Faculties and Departments</a></p><ul id="random5a6f082cd48b68_group" role="group"><li class="type_unknown depth_4 contains_branch" aria-labelledby="label_4_13"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b69_group"><a tabindex="-1" id="label_4_13" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=6191">Computer Laboratory </a></p><ul id="random5a6f082cd48b69_group" role="group"><li class="type_unknown depth_5 contains_branch" aria-labelledby="label_5_14"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b610_group"><a tabindex="-1" id="label_5_14" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=6692">Part IA</a></p><ul id="random5a6f082cd48b610_group" role="group"><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_15"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b611_group"><a tabindex="-1" id="label_6_15" title="Computer Science Paper 1 (IA)" href="https://www.vle.cam.ac.uk/course/view.php?id=140952">Computer Science Paper 1 (IA)</a></p><ul id="random5a6f082cd48b611_group" role="group"><li class="type_unknown depth_7 contains_branch" aria-labelledby="label_7_16"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b612_group"><a tabindex="-1" id="label_7_16" href="https://www.vle.cam.ac.uk/user/index.php?id=140952">Participants</a></p><ul id="random5a6f082cd48b612_group" role="group" aria-hidden="true"><li class="type_setting depth_8 item_with_icon" aria-labelledby="label_8_17"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_8_17" href="https://www.vle.cam.ac.uk/blog/index.php?courseid=140952"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Course blogs</span></a></p></li><li class="type_user depth_8 item_with_icon" aria-labelledby="label_8_18"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_8_18" href="https://www.vle.cam.ac.uk/user/view.php?id=722951&amp;course=140952"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Kyra Mozley</span></a></p></li></ul></li><li class="type_setting depth_7 item_with_icon" aria-labelledby="label_7_19"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_7_19" href="https://www.vle.cam.ac.uk/grade/report/index.php?id=140952"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/grades"/><span class="item-content-wrap">Grades</span></a></p></li><li class="type_activity depth_7 item_with_icon" aria-labelledby="label_7_20"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_7_20" href="https://www.vle.cam.ac.uk/mod/forum/view.php?id=6768842"><img class="smallicon navicon" alt="Forum" title="Forum" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/forum/1516096102/icon"/><span class="item-content-wrap">News forum</span></a></p></li><li class="type_activity depth_7 item_with_icon" aria-labelledby="label_7_21"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_7_21" href="https://www.vle.cam.ac.uk/mod/url/view.php?id=7944801"><img class="smallicon navicon" alt="URL" title="URL" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/url/1516096102/icon"/><span class="item-content-wrap">Paper 1 Ticking Timeslots</span></a></p></li><li class="type_structure depth_7 contains_branch" aria-labelledby="label_7_22"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_1878392" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_1878392" data-node-key="1878392" data-node-type="30"><a tabindex="-1" id="label_7_22" href="https://www.vle.cam.ac.uk/course/view.php?id=140952&amp;sectionid=1878392">Foundations of Computer Science</a></p></li><li class="type_structure depth_7 contains_branch" aria-labelledby="label_7_23"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_1878432" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_1878432" data-node-key="1878432" data-node-type="30"><a tabindex="-1" id="label_7_23" href="https://www.vle.cam.ac.uk/course/view.php?id=140952&amp;sectionid=1878432">Object Oriented Programming</a></p></li><li class="type_structure depth_7 contains_branch" aria-labelledby="label_7_24"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b618_group"><a tabindex="-1" id="label_7_24" href="https://www.vle.cam.ac.uk/course/view.php?id=140952&amp;sectionid=1878752">Algorithms</a></p><ul id="random5a6f082cd48b618_group" role="group"><li class="type_activity depth_8 item_with_icon" aria-labelledby="label_8_25"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_8_25" href="https://www.vle.cam.ac.uk/mod/hsuforum/view.php?id=6783472"><img class="smallicon navicon" alt="Advanced Forum" title="Advanced Forum" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/hsuforum/1516096102/icon"/><span class="item-content-wrap">Algorithms Help Forum</span></a></p></li><li class="type_structure depth_8 contains_branch" aria-labelledby="label_8_26"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_1902682" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_1902682" data-node-key="1902682" data-node-type="30"><span tabindex="-1" id="label_8_26">Learning Materials (Lectures 1-10)</span></p></li><li class="type_structure depth_8 contains_branch" aria-labelledby="label_8_27"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b620_group"><span tabindex="-1" id="label_8_27">Ticks</span></p><ul id="random5a6f082cd48b620_group" role="group"><li class="type_structure depth_9 contains_branch" aria-labelledby="label_9_28"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b621_group"><span tabindex="-1" id="label_9_28">Tick 1</span></p><ul id="random5a6f082cd48b621_group" role="group"><li class="type_activity depth_10 item_with_icon" aria-labelledby="label_10_29"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_10_29" href="https://www.vle.cam.ac.uk/mod/url/view.php?id=6783312"><img class="smallicon navicon" alt="URL" title="URL" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/url/1516096102/icon"/><span class="item-content-wrap">Algorithms Tick 1 Description</span></a></p></li><li class="type_activity depth_10 item_with_icon contains_branch current_branch" aria-labelledby="label_10_30"><p class="tree_item hasicon branch active_tree_node" role="treeitem" aria-expanded="true" aria-owns="random5a6f082cd48b623_group"><a tabindex="-1" id="label_10_30" href="https://www.vle.cam.ac.uk/mod/vpl/view.php?id=6783322"><img class="smallicon navicon" alt="Virtual programming lab" title="Virtual programming lab" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/vpl/1516096102/icon"/><span class="item-content-wrap">Algorithms Tick 1</span></a></p><ul id="random5a6f082cd48b623_group" role="group"><li class="type_setting depth_11 item_with_icon" aria-labelledby="label_11_31"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_11_31" href="https://www.vle.cam.ac.uk/mod/vpl/view.php?id=6783322"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Description</span></a></p></li><li class="type_setting depth_11 item_with_icon" aria-labelledby="label_11_32"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_11_32" href="https://www.vle.cam.ac.uk/mod/vpl/forms/submission.php?id=6783322"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Submission</span></a></p></li><li class="type_setting depth_11 item_with_icon" aria-labelledby="label_11_33"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_11_33" href="https://www.vle.cam.ac.uk/mod/vpl/forms/edit.php?id=6783322"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Edit</span></a></p></li><li class="type_setting depth_11 item_with_icon" aria-labelledby="label_11_34"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_11_34" href="https://www.vle.cam.ac.uk/mod/vpl/forms/submissionview.php?id=6783322"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">Submission view</span></a></p></li></ul></li><li class="type_activity depth_10 item_with_icon" aria-labelledby="label_10_35"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_10_35" href="https://www.vle.cam.ac.uk/mod/url/view.php?id=6783332"><img class="smallicon navicon" alt="URL" title="URL" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/url/1516096102/icon"/><span class="item-content-wrap">Algorithms Tick 1* Description</span></a></p></li><li class="type_activity depth_10 item_with_icon" aria-labelledby="label_10_36"><p class="tree_item hasicon" role="treeitem" id="expandable_branch_40_6783342"><a tabindex="-1" id="label_10_36" href="https://www.vle.cam.ac.uk/mod/vpl/view.php?id=6783342"><img class="smallicon navicon" alt="Virtual programming lab" title="Virtual programming lab" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/vpl/1516096102/icon"/><span class="item-content-wrap">Algorithms Tick 1*</span></a></p></li></ul></li></ul></li></ul></li></ul></li><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_37"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_141182" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_141182" data-node-key="141182" data-node-type="20"><a tabindex="-1" id="label_6_37" title="Computer Science Paper 2 (IA)" href="https://www.vle.cam.ac.uk/course/view.php?id=141182">Computer Science Paper 2 (IA)</a></p></li></ul></li><li class="type_unknown depth_5 contains_branch" aria-labelledby="label_5_38"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b629_group"><a tabindex="-1" id="label_5_38" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=6682">Pre-arrival</a></p><ul id="random5a6f082cd48b629_group" role="group" aria-hidden="true"><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_39"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_118901" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_118901" data-node-key="118901" data-node-type="20"><a tabindex="-1" id="label_6_39" title="IA Computer Science Pre-Arrival Course" href="https://www.vle.cam.ac.uk/course/view.php?id=118901">IA Computer Science Pre-Arrival Course</a></p></li></ul></li></ul></li><li class="type_unknown depth_4 contains_branch" aria-labelledby="label_4_40"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b630_group"><a tabindex="-1" id="label_4_40" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=842">Natural Sciences Tripos Committee</a></p><ul id="random5a6f082cd48b630_group" role="group" aria-hidden="true"><li class="type_unknown depth_5 contains_branch" aria-labelledby="label_5_41"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b631_group"><a tabindex="-1" id="label_5_41" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=1882">Part IA</a></p><ul id="random5a6f082cd48b631_group" role="group" aria-hidden="true"><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_42"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_68111" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_68111" data-node-key="68111" data-node-type="20"><a tabindex="-1" id="label_6_42" title="NST Part IA: Mathematics" href="https://www.vle.cam.ac.uk/course/view.php?id=68111">NST Part IA: Mathematics</a></p></li><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_43"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_80501" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_80501" data-node-key="80501" data-node-type="20"><a tabindex="-1" id="label_6_43" title="NST Part IA: Physics" href="https://www.vle.cam.ac.uk/course/view.php?id=80501">NST Part IA: Physics</a></p></li><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_44"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_72511" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_72511" data-node-key="72511" data-node-type="20"><a tabindex="-1" id="label_6_44" title="NST Part IA: Scientific Computing " href="https://www.vle.cam.ac.uk/course/view.php?id=72511">NST Part IA: Scientific Computing </a></p></li></ul></li></ul></li></ul></li><li class="type_unknown depth_3 contains_branch" aria-labelledby="label_3_45"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b632_group"><a tabindex="-1" id="label_3_45" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=72">Colleges</a></p><ul id="random5a6f082cd48b632_group" role="group" aria-hidden="true"><li class="type_unknown depth_4 contains_branch" aria-labelledby="label_4_46"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b633_group"><a tabindex="-1" id="label_4_46" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=1472">Murray Edwards College</a></p><ul id="random5a6f082cd48b633_group" role="group" aria-hidden="true"><li class="type_unknown depth_5 contains_branch" aria-labelledby="label_5_47"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b634_group"><a tabindex="-1" id="label_5_47" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=4121">Tutorial</a></p><ul id="random5a6f082cd48b634_group" role="group" aria-hidden="true"><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_48"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_131822" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_131822" data-node-key="131822" data-node-type="20"><a tabindex="-1" id="label_6_48" title="Current Undergraduates" href="https://www.vle.cam.ac.uk/course/view.php?id=131822">Current Undergraduates</a></p></li><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_49"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_147341" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_147341" data-node-key="147341" data-node-type="20"><a tabindex="-1" id="label_6_49" title="DoS Appointments" href="https://www.vle.cam.ac.uk/course/view.php?id=147341">DoS Appointments</a></p></li></ul></li><li class="type_unknown depth_5 contains_branch" aria-labelledby="label_5_50"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b635_group"><a tabindex="-1" id="label_5_50" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=4151">Gateway Programme</a></p><ul id="random5a6f082cd48b635_group" role="group" aria-hidden="true"><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_51"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_106232" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_106232" data-node-key="106232" data-node-type="20"><a tabindex="-1" id="label_6_51" title="Gateway Programme 2017/18" href="https://www.vle.cam.ac.uk/course/view.php?id=106232">Gateway Programme 2017/18</a></p></li></ul></li><li class="type_unknown depth_5 contains_branch" aria-labelledby="label_5_52"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="false" aria-owns="random5a6f082cd48b636_group"><a tabindex="-1" id="label_5_52" href="https://www.vle.cam.ac.uk/course/index.php?categoryid=4141">Administration</a></p><ul id="random5a6f082cd48b636_group" role="group" aria-hidden="true"><li class="type_course depth_6 contains_branch" aria-labelledby="label_6_53"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_107852" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_107852" data-node-key="107852" data-node-type="20"><a tabindex="-1" id="label_6_53" title="President&#039;s Office" href="https://www.vle.cam.ac.uk/course/view.php?id=107852">President's Office</a></p></li></ul></li></ul></li></ul></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_55"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_55" href="https://www.vle.cam.ac.uk/course/index.php#"><img class="smallicon navicon" alt="" src="https://www.vle.cam.ac.uk/theme/image.php/cambridge/core/1516096102/i/navigationitem"/><span class="item-content-wrap">More...</span></a></p></li></ul></li></ul></li></ul></div></div><span class="skip-block-to" id="sb-1"></span><a class="skip skip-block" id="fsb-2" href="#sb-2">Skip Accessibility</a><div id="inst358011" class="block_accessibility  block" role="complementary" data-block="accessibility" data-instanceid="358011" aria-labelledby="instance-358011-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-358011-header">Accessibility</h2></div></div><div class="content"><div id="accessibility_controls" class="content"><ul id="block_accessibility_textresize" class="button_row"><li class="access-button"><a title="Decrease Text Size" id="block_accessibility_dec" href="https://www.vle.cam.ac.uk/blocks/accessibility/changesize.php?redirect=https%3A%2F%2Fwww.vle.cam.ac.uk%2Fmod%2Fvpl%2Fforms%2Fedit.php%3Fid%3D6783322%26userid%3D722951&amp;op=dec">A-</a></li><li class="access-button"><a id="block_accessibility_reset" title="Reset Text Size (Clears Saved Setting)" href="https://www.vle.cam.ac.uk/blocks/accessibility/changesize.php?redirect=https%3A%2F%2Fwww.vle.cam.ac.uk%2Fmod%2Fvpl%2Fforms%2Fedit.php%3Fid%3D6783322%26userid%3D722951&amp;op=reset" class="disabled">A</a></li><li class="access-button"><a title="Increase Text Size" id="block_accessibility_inc" href="https://www.vle.cam.ac.uk/blocks/accessibility/changesize.php?redirect=https%3A%2F%2Fwww.vle.cam.ac.uk%2Fmod%2Fvpl%2Fforms%2Fedit.php%3Fid%3D6783322%26userid%3D722951&amp;op=inc">A+</a></li><li class="access-button"><a title="Save Setting" id="block_accessibility_save" href="https://www.vle.cam.ac.uk/blocks/accessibility/database.php?redirect=https%3A%2F%2Fwww.vle.cam.ac.uk%2Fmod%2Fvpl%2Fforms%2Fedit.php%3Fid%3D6783322%26userid%3D722951&amp;op=save&amp;size=1&amp;scheme=1">&nbsp</a></li></ul><ul id="block_accessibility_changecolour"><li class="access-button"><a id="block_accessibility_colour1" href="https://www.vle.cam.ac.uk/blocks/accessibility/changecolour.php?redirect=https%3A%2F%2Fwww.vle.cam.ac.uk%2Fmod%2Fvpl%2Fforms%2Fedit.php%3Fid%3D6783322%26userid%3D722951&amp;scheme=1" class="disabled">R</a></li><li class="access-button"><a id="block_accessibility_colour2" href="https://www.vle.cam.ac.uk/blocks/accessibility/changecolour.php?redirect=https%3A%2F%2Fwww.vle.cam.ac.uk%2Fmod%2Fvpl%2Fforms%2Fedit.php%3Fid%3D6783322%26userid%3D722951&amp;scheme=2">A</a></li><li class="access-button"><a id="block_accessibility_colour3" href="https://www.vle.cam.ac.uk/blocks/accessibility/changecolour.php?redirect=https%3A%2F%2Fwww.vle.cam.ac.uk%2Fmod%2Fvpl%2Fforms%2Fedit.php%3Fid%3D6783322%26userid%3D722951&amp;scheme=3">A</a></li><li class="access-button"><a id="block_accessibility_colour4" href="https://www.vle.cam.ac.uk/blocks/accessibility/changecolour.php?redirect=https%3A%2F%2Fwww.vle.cam.ac.uk%2Fmod%2Fvpl%2Fforms%2Fedit.php%3Fid%3D6783322%26userid%3D722951&amp;scheme=4">A</a></li></ul><div id="block_accessibility_message" class="clearfix"></div><input type="button" value="Launch ATbar" id="block_accessibility_launchtoolbar" class="atbar_control access-button" /><span class="atbar-always"><input type="checkbox" value="1" id="atbar_auto" name="atbar_auto" class="atbar_control" /><label for="atbar_auto" class="atbar_control">(always?)</label></span></div><span id="loader-icon"></span></div></div><span class="skip-block-to" id="sb-2"></span></aside>                        </div>
+                    </div>
+                    <aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post" data-droptarget="1"></aside>                </div>
+                <script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://www.vle.cam.ac.uk/lib/requirejs.php/1516096102/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://www.vle.cam.ac.uk/lib/javascript.php/1516096102/lib/jquery/jquery-3.1.0.min',
+        jqueryui: 'https://www.vle.cam.ac.uk/lib/javascript.php/1516096102/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://www.vle.cam.ac.uk/lib/javascript.php/1516096102/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/lib/javascript.php/1516096102/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://www.vle.cam.ac.uk/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("en",{
+ "Play": "Play",
+ "Pause": "Pause",
+ "Current Time": "Current Time",
+ "Duration Time": "Duration Time",
+ "Remaining Time": "Remaining Time",
+ "Stream Type": "Stream Type",
+ "LIVE": "LIVE",
+ "Loaded": "Loaded",
+ "Progress": "Progress",
+ "Fullscreen": "Fullscreen",
+ "Non-Fullscreen": "Non-Fullscreen",
+ "Mute": "Mute",
+ "Unmute": "Unmute",
+ "Playback Rate": "Playback Rate",
+ "Subtitles": "Subtitles",
+ "subtitles off": "subtitles off",
+ "Captions": "Captions",
+ "captions off": "captions off",
+ "Chapters": "Chapters",
+ "Close Modal Dialog": "Close Modal Dialog",
+ "Descriptions": "Descriptions",
+ "descriptions off": "descriptions off",
+ "Audio Track": "Audio Track",
+ "You aborted the media playback": "You aborted the media playback",
+ "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+ "No compatible source was found for this media.": "No compatible source was found for this media.",
+ "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+ "Play Video": "Play Video",
+ "Close": "Close",
+ "Modal Window": "Modal Window",
+ "This is a modal window": "This is a modal window",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+ ", opens captions settings dialog": ", opens captions settings dialog",
+ ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+ ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+ ", selected": ", selected"
+});
+
+    });
+});;
+require(["block_navigation/navblock"], function(amd) { amd.init("32"); });;
+require(["block_settings/settingsblock"], function(amd) { amd.init("42", null); });;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(['core/yui'], function(Y) {
+    Y.use('moodle-core-actionmenu', function() {
+        M.core.actionmenu.init();
+    });
+});
+;
+
+require(['jquery', 'message_popup/message_popover_controller'], function($, controller) {
+    var container = $('#nav-message-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+require(["core/notification"], function(amd) { amd.init(9683282, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/zip/inflate.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/zip/unzip.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/ace9/ace.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/ace9/ext-language_tools.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/xterm/term.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/VPLUtil.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/VPLTerminal.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/VPLIDE.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/VPLIDEFile.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/mod/vpl/editor/VPLIDEButton.js"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/theme/javascript.php/cambridge/1516096102/footer"></script>
+<script type="text/javascript" src="https://www.vle.cam.ac.uk/lib/javascript.php/1516096102/course/format/flexsections/renderer.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","viewallcourses":"View all courses","morehelp":"More help","loadinghelp":"Loading...","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"block":{"addtodock":"Move this to the dock","undockitem":"Undock this item","dockblock":"Dock {$a} block","undockblock":"Undock {$a} block","undockall":"Undock all","hidedockpanel":"Hide the dock panel","hidepanel":"Hide panel"},"langconfig":{"thisdirectionvertical":"btt"},"block_accessibility":{"saved":"Setting Saved","jsnosave":"Error saving settings","reset":"Setting Cleared","jsnosizereset":"Error resetting text size","jsnocolourreset":"Error resetting colour scheme","jsnosize":"Error changing size","jsnocolour":"Error changing colour scheme","jsnotloggedin":"Error! Please check if you are logged-in to the system or contact your administrator","launchtoolbar":"Launch ATbar"},"format_flexsections":{"confirmmerge":"Are you sure you want to merge this section with its parent?"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {setTimeout("fix_column_widths()", 20);
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\nconfig: [\"MMLorHTML.js\"],\r\nextensions: [\"tex2jax.js\",\"mml2jax.js\",\"MathMenu.js\",\"MathZoom.js\", \"CHTML-preview.js\"],\r\njax: [\"input\/TeX\",\"input\/MathML\",\"output\/HTML-CSS\",\"output\/NativeMML\", \"output\/CommonHTML\"],\r\nTeX: {\r\n    extensions: [\"mhchem.js\", \"color.js\", \"AMSmath.js\", \"AMSsymbols.js\", \"noErrors.js\", \"noUndefined.js\"]\r\n  },\r\n menuSettings: {\r\n    zoom: \"Double-Click\",\r\n    mpContext: true,\r\n    mpMouse: true\r\n },\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: true\r\n});\r\n","lang":"en"});
+});
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+Y.use("moodle-core-dock-loader",function() {M.core.dock.loader.initLoader();
+});
+ M.util.js_pending('random5a6f082cd48b638'); Y.use('block_accessibility', function(Y) { M.block_accessibility.init(Y, false, "358011");  M.util.js_complete('random5a6f082cd48b638'); });
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+M.util.init_block_hider(Y, {"id":"inst32","title":"Navigation","preference":"block32hidden","tooltipVisible":"Hide Navigation block","tooltipHidden":"Show Navigation block"});
+M.util.init_block_hider(Y, {"id":"inst358011","title":"Accessibility","preference":"block358011hidden","tooltipVisible":"Hide Accessibility block","tooltipHidden":"Show Accessibility block"});
+ M.util.js_pending('random5a6f082cd48b652'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5a6f082cd48b652'); });
+})();
+//]]>
+</script>
+            </div>
+            <footer id="page-footer">
+                <div id="course-footer"></div>
+                <p class="helplink"></p>
+                <div class="logininfo">You are logged in as <a href="https://www.vle.cam.ac.uk/user/profile.php?id=722951" title="View profile">Kyra Mozley</a> (<a href="https://www.vle.cam.ac.uk/login/logout.php?sesskey=PYfUCgi86A">Log out</a>)</div><div id="page-footer-bottom"  class="cam-local-footer">
+                <ul class="" style="">
+                    <li><a href="http://www.student-systems.admin.cam.ac.uk/moodle/legal" target="_blank" title="Policies and Legal statements" style="">Policies and Legal statements</a></li>
+                </ul>
+</div>
+
+<script>
+/**
+ * University of Cambridge, Information Services
+ * Change Request #29 - Turnitin Assignments T&C Checkbox Solution
+ *
+ * Author: R. Al-Rawi (ra273)
+ *
+ * This is a JavaScript script that looks for specific pages in Moodle
+ * as defined by a CSS selector, and injects HTML into the page at a
+ * specific insertion point.
+ * The HTML consists of a checkbox and text,
+ */
+ 
+console.log('** UniOfCam-UIS-ra273: tii-checkbox: initialising...');
+ 
+/**
+ *
+ * Set up array of pages that trigger the checkbox creation
+ *
+ * Each page is a JavaScript object that defines:
+ *
+ *   - name:             the name of the page object
+ *   - csspathpage:      the CSS path that identifies the page
+ *   - csspathip:        the CSS path of the insertion point
+ *   - csspathipelement: the CSS path of the insertion point element to insert before
+ *   - buttonids:        an array of the ids of buttons to enable/disable
+ *   - actions:          any actions (i.e. JavaScript functions) to call
+ *
+ */
+ 
+/************************************************************************/
+ 
+/** array to hold page objects */
+var triggerPages = [];
+ 
+/** page object for "new TII2 assignment" page */
+var tpNewTIIAssignment = {
+    name             : 'tpNewTIIAssignment',
+    csspathpage      : '#page-mod-turnitintooltwo-mod:not([class*="cmid-"])',
+    csspathip        : '#mform1 > fieldset.hidden',
+    csspathipelement : '#mform1 > fieldset.hidden > div',
+    buttonids        : ['id_submitbutton', 'id_submitbutton2'],
+    actions          : []
+};
+ 
+triggerPages.push(tpNewTIIAssignment);
+ 
+ 
+/** page object for "reset course" page */
+var tpResetTIIAssignment = {
+    name             : 'tpResetTIIAssignment',
+    csspathpage      : '#page-course-reset',
+    csspathip        : '#id_turnitintooltwoheader',
+    csspathipelement : null,
+    buttonids        : ['id_submitbutton'],
+    actions          : ["toggleClass('id_turnitintooltwoheader', 'collapsed')"]
+};
+ 
+triggerPages.push(tpResetTIIAssignment);
+ 
+/************************************************************************/
+ 
+ 
+/**
+ *
+ * Function to toggle the css class for an HTML element.
+ *
+ * This either adds a class to a given element, if it's not
+ * on the element already, or removes it, if it is present on the
+ * element.
+ *
+ * elementId: id of the element to toggle the class on
+ * className: name of the CSS class to toggle
+ */
+var toggleClass = function (elementId, className) {
+ 
+    var classes = document.getElementById(elementId).classList;
+ 
+    if (classes.contains(className)) {
+        classes.remove(className);
+    } else {
+        classes.add(className);
+    }
+   
+}
+ 
+ 
+/**
+ *
+ * Function to enable/disable the "save" submit buttons.
+ *
+ * This function loops round an array of button element ids and
+ * sets the "disabled" property for each element according to the
+ * checked status of a given checkbox element.
+ *
+ * theCheckbox: the checkbox element object
+ * triggerPage: a reference to the trigger page object
+ */
+var updateSubmitButtonState = function (theCheckbox, triggerPage) {
+  /** Get the trigger page object */
+  oTriggerPage = eval(triggerPage);
+  console.log('** UniOfCam-UIS-ra273: tii-checkbox: ' + (theCheckbox.checked ? 'enabling' : 'disabling') + ' submit buttons...');
+ 
+  /** loop round the buttonids array */
+  oTriggerPage.buttonids.forEach(function (buttonId) {
+ 
+    /** if we have a button id to work with */
+    if (buttonId != '' && buttonId != null) {
+      /** get a reference to the button */
+      button = document.getElementById(buttonId);
+      /**
+       * set the button "disabled" property to the inverse
+       * of the "checked" property for the passed-in checkbox.
+       *
+       * So when the checkbox is *checked*, the button is *enabled*
+       */
+      button.disabled = !theCheckbox.checked;
+    }
+ 
+  });
+ 
+}
+ 
+/**
+ *
+ * Function to create the checkbox + label, all inside a container div
+ *
+ */
+var createCBDiv = function (triggerPage) {
+    var policyStatement = 'I have read and understood the <a href="http://www.admin.cam.ac.uk/univ/plagiarism/examiners/detection.html" target="_blank">University\'s Conditions of Use</a> for Turnitin UK software';
+ 
+    /** Create a div DOM element to contain the checkbox + label */
+    var theDiv = document.createElement("div");
+    theDiv.setAttribute("id", "tii_tandc");
+    theDiv.setAttribute("class", "tii_tandc");
+ 
+    /** HTML for checkbox and label */
+    divInnerHTML = '<input onchange="updateSubmitButtonState(this, ' + triggerPage + ')" id="tii_tandc_cb" type="checkbox" class="felement">';
+    divInnerHTML += '<label for="tii_tandc_cb">' + policyStatement + '</label>';
+    theDiv.innerHTML = divInnerHTML;
+ 
+    return theDiv;
+}
+ 
+/**
+ *
+ * Main Section
+ *
+ */
+ 
+/** loop round the trigger pages defined */
+triggerPages.forEach(function (tp) {
+ 
+  console.log("** UniOfCam-UIS-ra273 - checking trigger page: " + tp.csspathpage + "...");
+ 
+  /** can we find a match with the css path for this trigger page? */
+  var foundPage = !(document.querySelector(tp.csspathpage) == null);
+ 
+  /** Not on a trigger page - exit */
+  if (foundPage == false) {
+      console.log("** UniOfCam-UIS-ra273 - not on a trigger page - exiting... ");
+      return;
+  }
+ 
+  console.log("** UniOfCam-UIS-ra273 - found trigger page... ");
+ 
+  /** attempt to find the element matching the insertion point CSS path */
+  var ip = document.querySelector(tp.csspathip);
+ 
+  /** No insertion point found - exit */
+  if (ip == null) {
+      console.log("** UniOfCam-UIS-ra273 - insertion point not found - exiting... ");
+      return;
+  }
+ 
+  console.log("** UniOfCam-UIS-ra273 - found insertion point... ");
+ 
+  /** construct the checkbox div */
+  var cbContainer = createCBDiv(tp.name);
+  /**
+   * insert the checkbox div into the insertion point
+   * NOTE: using "insertBefore" here with an empty 2nd parameter inserts the
+   * checkbox div as the last child element of the insertion point
+   */
+  ip.insertBefore(cbContainer, document.querySelector(tp.csspathipelement));
+ 
+  /** loop round the array of buttons for the current trigger page and disable them */
+  tp.buttonids.forEach(function (buttonId) {
+ 
+    if (buttonId != '' && buttonId != null) {
+        console.log("** UniOfCam-UIS-ra273 - disabling button" + buttonId);
+        button = document.getElementById(buttonId);
+        button.disabled = true;
+    }
+     
+  });
+ 
+  console.log("** UniOfCam-UIS-ra273 - there are " + tp.actions.length + " actions to run for this trigger page");
+ 
+  /** loop round the array of actions to carry out at the end */
+  tp.actions.forEach(function (action) {
+ 
+    /** if we have a usable action, execute it */
+    if (action != '' && action != null) {
+        console.log("** UniOfCam-UIS-ra273 - executing action " + action);
+        var f = new Function(action);
+        return (f());
+    }
+     
+  });
+ 
+});
+</script>            </footer>
+        </div>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-47873705-2', 'cam.ac.uk');
+            ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>

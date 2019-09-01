@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="buttondown_mod.css" type="text/css" />
+  <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div id="focs-tick-4-integer-streams-continued" class="section level1">
+<h1>FoCS Tick 4*: Integer Streams Continued</h1>
+<p><em><strong>Required submission: tick4star.ml</strong></em></p>
+<p>The Fibonacci Numbers are defined as follows: <span class="math">\(F_1=1\)</span>, <span class="math">\(F_2=1\)</span>, and <span class="math">\(F_{n+2} = F_n + F_{n+1}\)</span>. So new elements of the sequence are defined in terms of two previous elements. If <span>ML</span> lists were streams then we could define the steam of Fibonacci Numbers (in pseudo-<span>ML</span>) as follows:</p>
+<pre><code>val fibs = 1 :: 1 :: (map2 plus fibs (tail fibs));</code></pre>
+<p>Here <code>plus m n = m+n</code>, and two copies of <code>fibs</code> recursively appear in the definition of this stream. But this code is not legal; we have to use <code>Cons</code>. We also have to force <code>fibs</code> into a function, since in <span>ML</span> only functions can be recursive. So the following is legal:</p>
+<pre><code>fun fibs() =\
+    Cons(1, fn()=&gt;
+         Cons(1, fn()=&gt;   map2  plus  (fibs())  (tail(fibs())) ));</code></pre>
+<div class="tick">
+<ol style="list-style-type: decimal">
+<li>Write a function <code>merge(xs,ys)</code> that takes two <strong>increasing</strong> streams, <span class="math">\(x_0 &lt; x_1 &lt; x_2 &lt; \ldots\)</span> and <span class="math">\(y_0 &lt; y_1 &lt; y_2 &lt; \ldots\)</span>, and returns the <strong>increasing</strong> stream containing all the <span class="math">\(x\)</span>’s and <span class="math">\(y\)</span>’s (note that the definition is strictly increasing, so duplicates should not occur in the output). Since the input streams are increasing, you need to compare their heads, take the smaller one, and <span><em>recursively</em></span> merge whatever remains. Make certain there are no repeated elements in the output stream.</li>
+</ol>
+<div class="req">
+<p>Required functions:</p>
+<pre><code>val merge = fn : int stream * int stream -&gt; int stream</code></pre>
+</div>
+</div>
+<div class="tick">
+<ol start="2" style="list-style-type: decimal">
+<li>Construct in <span>ML</span> the <strong>increasing</strong> stream <code>pows23</code> containing all numbers of the form <span class="math">\(2^i\times 3^j\)</span> for integers <span class="math">\(i\)</span>, <span class="math">\(j\geqslant 0\)</span>.</li>
+</ol>
+<p><em>Hint</em>: The first element is 1, and each new element can be obtained by multiplying some previous element by 2 or 3. The code is similar to <code>fibs</code>, and calls <code>merge</code>.</p>
+<div class="req">
+<p>Required functions:</p>
+<pre><code>val pows23 : int stream</code></pre>
+</div>
+</div>
+<div class="tick">
+<ol start="3" style="list-style-type: decimal">
+<li>Construct the <strong>increasing</strong> stream <code>pows235</code> of all numbers of the form <span class="math">\(2^i\times 3^j \times 5^k\)</span> for integers <span class="math">\(i\)</span>, <span class="math">\(j\)</span>, <span class="math">\(k\geqslant 0\)</span>.</li>
+</ol>
+<div class="req">
+<p>Required functions:</p>
+<pre><code>val pows235 : int stream</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

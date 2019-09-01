@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../rkh23-css/buttondown_mod.css" type="text/css" />
+</head>
+<body>
+<div id="focs-tick-3-sets-as-binary-search-trees" class="section level1">
+<h1>FoCS Tick 3*: Sets as Binary Search Trees</h1>
+<p><em><strong>Required submission: tick3star.ml</strong></em></p>
+<p>A binary search tree uses an ordering on the labels to represent a dictionary of (<em>key</em>, <em>value</em>) pairs. But if we eliminate the stored values and have only keys as labels, then a binary search tree represents a set of keys. The tasks below concern this representation of sets of strings. There is no need to balance the trees you produce.</p>
+<div class="tick">
+<ol style="list-style-type: decimal">
+<li>Code functions <code>insert(a,t)</code> and <code>member(a,t)</code> to insert a string into a set and to test whether a given string belongs to a set.</li>
+</ol>
+<div class="req">
+<p>Required functions:</p>
+<pre><code>val insert = fn : string * string tree -&gt; string tree
+val member = fn : string * string tree -&gt; bool</code></pre>
+</div>
+</div>
+<div class="tick">
+<ol start="2" style="list-style-type: decimal">
+<li>Write an ML function <code>union(t1,t2)</code> to return the union of two given binary search trees, namely the tree consisting of all of the elements of <code>t1</code> and <code>t2</code>.</li>
+</ol>
+<div class="req">
+<p>Required functions:</p>
+<pre><code>val union = fn : string tree * string tree -&gt; string tree</code></pre>
+</div>
+</div>
+<div class="tick">
+<ol start="3" style="list-style-type: decimal">
+<li>Write an ML function <code>inter(t1,t2)</code> to return the intersection of two given binary search trees, namely the tree consisting of all of the elements in common to <code>t1</code> and <code>t2</code>.</li>
+</ol>
+<div class="req">
+<p>Required functions:</p>
+<pre><code>val inter = fn : string tree * string tree -&gt; string tree</code></pre>
+</div>
+</div>
+<div class="tick">
+<ol start="4" style="list-style-type: decimal">
+<li>Code the function <code>remove(a,t)</code> to remove an element from a set.</li>
+</ol>
+<div class="req">
+<p>Required functions:</p>
+<pre><code>val remove = fn : string * string tree -&gt; string tree</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

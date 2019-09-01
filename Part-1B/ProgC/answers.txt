@@ -1,0 +1,11 @@
+Part 1
+1) Intended functionality of server.c is to send a file (fb) over the server, which we port into the network, where the port and file are passed into the main function. It checks that the file can be opened for update. Creates a socket, binds the socket to the port number address, listens for connections and can then accept them, then writes data to the client. client.c creates a socket, tries to connect to it, and then writes data from bytes read in to stdout. 
+
+2) Three errors: 
+	1. There is a missing } at the end to close the main function in server.c 
+	2. In server.c, the variable w is uninitialised when used as the while loop condition 
+	3. In client.c, (right by the end) it says fwrite(bytes, n, sizeof(char), stdout);, but this is wrong and should instead be fwrite(bytes, sizeof(char), n, stdout);
+	since n is the number of elements, and sizeof(char) is the size of bytes of each element to be written. 
+
+
+
